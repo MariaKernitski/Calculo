@@ -18,7 +18,14 @@ process.stdin.on("data", function (data) {
         while (mmc % menor != 0) {
             mmc += maior;
         }
-        console.log(mmc);
+        while (numero2 !== 0) {
+            let temp = numero2;
+            numero2 = numero % numero2;
+            numero = temp 
+        }
+        var mdc = numero;
+        console.log("O MDC entre estes números é: " + mdc)
+        console.log("O MMC entre estes números é: " + mmc);
         process.exit()
     }
 })
